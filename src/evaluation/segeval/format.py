@@ -5,7 +5,7 @@ Segmentation encoding format converstion utilities.
 """
 from __future__ import absolute_import
 from itertools import groupby
-from segeval.util.lang import enum
+from src.evaluation.segeval.util.lang import enum
 
 BoundaryFormat = enum(position='position', mass='mass', sets='sets', nltk='nltk')
 

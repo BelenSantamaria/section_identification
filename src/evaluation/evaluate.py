@@ -6,11 +6,11 @@ from pathlib import Path
 from numpy import average
 from tqdm import tqdm
 
-from dataset_model import *
-from segeval.format import BoundaryFormat
-from segeval.similarity import B2_parameters as b2_default_parameters, weight_a
-from segeval.similarity.boundary import boundary_similarity_2
-from segeval.similarity.weight import weight_s, weight_t
+from src.evaluation.dataset_model import *
+from src.evaluation.segeval.format import BoundaryFormat
+from src.evaluation.segeval.similarity import B2_parameters as b2_default_parameters, weight_a
+from src.evaluation.segeval.similarity.boundary import boundary_similarity_2
+from src.evaluation.segeval.similarity.weight import weight_s, weight_t
 
 
 def evaluate_boundaries(reference_boundaries: list[frozenset], prediction_boundaries: list[frozenset]) -> dict:
@@ -130,7 +130,7 @@ def score_predictions(prediction_file: Path, reference_file: Path = None, output
 
     if output_result_file is not None:
         # If output file doesnt end in .json add it
-        if not output_result_file.name.endswith('.json'):
+        if not output_result_file.endswith('.json'):
             output_result_file = output_result_file.with_suffix('.json')
 
         with open(output_result_file, 'w', encoding='utf8') as f:

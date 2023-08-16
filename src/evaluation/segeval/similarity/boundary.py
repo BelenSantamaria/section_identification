@@ -4,8 +4,8 @@ Boundary Similarity (B) package.
 .. moduleauthor:: Chris Fournier <chris.m.fournier@gmail.com>
 """
 from __future__ import absolute_import, division
-from segeval.similarity import __boundary_statistics__, SIMILARITY_METRIC_DEFAULTS
-from segeval.util import __fnc_metric__
+from src.evaluation.segeval.similarity import __boundary_statistics__, SIMILARITY_METRIC_DEFAULTS
+from src.evaluation.segeval.util import __fnc_metric__
 from decimal import Decimal
 
 

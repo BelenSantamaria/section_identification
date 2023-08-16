@@ -94,23 +94,23 @@ class module(ModuleType):
 
 
 # keep a reference to this module so that it's not garbage collected
-old_module = sys.modules['segeval']
+# old_module = sys.modules['segeval']
 
 
 # setup the new module and patch it into the dict of loaded modules
-new_module = sys.modules['segeval'] = module('segeval')
-new_module.__dict__.update({
-    '__file__':             __file__,
-    '__path__':             __path__,
-    '__package__':          __package__,
-    '__project__':          __project__,
-    '__doc__':              __doc__,
-    '__version__':          __version__,
-    '__version_number__':   __version_number__,
-    '__author__':           __author__,
-    '__author_email__':     __author_email__,
-    '__copyright__':        __copyright__,
-    '__all__':              tuple(object_origins),
-    '__docformat__':        'restructuredtext en',
-    '__description__':      __description__
-})
+# new_module = sys.modules['segeval'] = module('segeval')
+# new_module.__dict__.update({
+#     '__file__':             __file__,
+#     '__path__':             __path__,
+#     '__package__':          __package__,
+#     '__project__':          __project__,
+#     '__doc__':              __doc__,
+#     '__version__':          __version__,
+#     '__version_number__':   __version_number__,
+#     '__author__':           __author__,
+#     '__author_email__':     __author_email__,
+#     '__copyright__':        __copyright__,
+#     '__all__':              tuple(object_origins),
+#     '__docformat__':        'restructuredtext en',
+#     '__description__':      __description__
+# })

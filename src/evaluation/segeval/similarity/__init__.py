@@ -4,14 +4,14 @@ Similarity utility functions based upon boundary edit distance.
 .. moduleauthor:: Chris Fournier <chris.m.fournier@gmail.com>
 """
 from __future__ import absolute_import, division
-from segeval.similarity.distance import identify_types
-from segeval.similarity.distance.multipleboundary import boundary_edit_distance
-from segeval.similarity.weight import weight_a, weight_s_scale, weight_t_scale, B2_parameters
-from segeval.metric import METRIC_DEFAULTS
-from segeval.ml import ConfusionMatrix as cm
-from segeval.format import (BoundaryFormat, boundary_string_from_masses,
+from src.evaluation.segeval.similarity.distance import identify_types
+from src.evaluation.segeval.similarity.distance.multipleboundary import boundary_edit_distance
+from src.evaluation.segeval.similarity.weight import weight_a, weight_s_scale, weight_t_scale, B2_parameters
+from src.evaluation.segeval.metric import METRIC_DEFAULTS
+from src.evaluation.segeval.ml import ConfusionMatrix as cm
+from src.evaluation.segeval.format import (BoundaryFormat, boundary_string_from_masses,
                             convert_positions_to_masses, convert_nltk_to_masses)
-from segeval.util import __fnc_metric__, SegmentationMetricError
+from src.evaluation.segeval.util import __fnc_metric__, SegmentationMetricError
 
 SIMILARITY_METRIC_DEFAULTS = dict(METRIC_DEFAULTS)
 SIMILARITY_METRIC_DEFAULTS.update({
