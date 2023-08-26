@@ -141,7 +141,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Codalab scorer for the IberLEF 2023 ClinAIS task.')
     parser.add_argument('-p', '--prediction_file', type=Path, required=True, help='JSON file containing the predictions. If reference file is not provided, this file must include the reference annotations.')
     parser.add_argument('-r', '--reference_file', type=Path, required=False, default=None, help='JSON file containing the reference annotations. If not provided, the reference annotations must be included in the prediction file.')
-    parser.add_argument('-o', '--output_result_file', type=Path, required=False, default=None, help='Output JSON file where evaluation results will be saved.')
+    parser.add_argument('-o', '--output_result_file', type=Path, required=False, default=None, help='Output JSON file where evaluation rule will be saved.')
     parser.add_argument('--add_scores_in_prediction_file', action='store_true', help='If set, the scores will be added to the prediction file and saved in the same location with the .evaluated.json extension.')
     args = parser.parse_args()
 
