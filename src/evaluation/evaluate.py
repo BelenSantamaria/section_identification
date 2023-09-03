@@ -6,7 +6,7 @@ from pathlib import Path
 from numpy import average
 from tqdm import tqdm
 
-from src.evaluation.dataset_model import *
+from src.evaluation.dataset_model import BoundaryAnnotation, ClinAISDataset, ClinicalSections
 from src.evaluation.segeval.format import BoundaryFormat
 from src.evaluation.segeval.similarity import B2_parameters as b2_default_parameters, weight_a
 from src.evaluation.segeval.similarity.boundary import boundary_similarity_2
